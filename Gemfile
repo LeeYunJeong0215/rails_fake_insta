@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 #회원가입 기능
 gem 'devise'
 
+#회원 권환 기능
+gem 'cancancan', '~>2.0'
+
 gem 'mini_magick'
 gem 'kaminari'
 gem 'carrierwave', '~> 1.0'
