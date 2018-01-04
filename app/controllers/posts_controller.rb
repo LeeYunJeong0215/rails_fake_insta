@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :index
   # before_action :is_owner?, only: [:update, :edit, :destroy]
+  load_and_authorize_resource param_method: :post_params
 
   def index
     # 모든 것을 보여주는 곳...
@@ -30,19 +31,19 @@ class PostsController < ApplicationController
   # update
   def update
     # @post = Post.find(params[:id]) #코드 중복 방지
-    authorize! :update, @post
+    #authorize! :update, @post
     @post.update(post_params)
     redirect_to "/posts/#{@post.id}"
   end
 
   def edit
-    authorize! :update, @post
+    # authorize! :update, @post
     # @post = Post.find(params[:id]) #코드 중복 방지
   end
 
   # delete
   def destroy
-    authorize! :destroy, @post
+    # authorize! :destroy, @post
     @post.destroy
     redirect_to '/'
     # @post = Post.find(params[:id])
