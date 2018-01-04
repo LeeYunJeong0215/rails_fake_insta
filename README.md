@@ -182,3 +182,50 @@ $ rails g devise User(모델명)
   <% end %>
   ```
 
+- devise view 파일 가져오기(커스터마이징)
+
+  ```console
+  $ rails g devise:views
+  ```
+
+- devise controller 커스터마이징 하기
+
+  ```console
+  $ rails g devise:controller users
+  ```
+
+  `users/` 많은 컨트롤러가 생김.
+
+  **반드시 `routes.rb`수정**
+
+  ```ruby
+  devise_for :users, controllers:{
+    sessions: 'users/sessions'
+    }
+  ```
+
+-  커스터마이징 column
+
+  1) `migration` 파일에 원하는 대로 만들기
+
+  2) 해당 view에서 input박스 만들기
+
+  3) strong parameter 설정(컨트롤러 직접 가능 / `application_controller.rb`에서도 가능)
+
+  ```ruby
+  class ApplicationController < ActionController::Base
+    # Prevent CSRF attacks by raising an exception.
+    # For APIs, you may want to use :null_session instead.
+    protect_from_forgery with: :exception
+    before_action :configure_permitted_parameters, if: :devise_controller?
+
+    protected
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
+    end
+  end
+
+  ```
+
+  ​

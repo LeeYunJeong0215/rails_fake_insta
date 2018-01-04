@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    current_user.posts.create(post_params)
     # post = Post.new
     # post.title = params[:title]
     # post.content = params[:content]

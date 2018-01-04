@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :blogs
+
+  # devise_for :users, controllers:{
+  #   sessions: 'users/sessions'
+  #   }
   root 'posts#index'
   # rake routes -> 내가 가진 경로들을 다 볼 수 있다.
   # resources :posts
@@ -15,6 +19,8 @@ Rails.application.routes.draw do
   put '/posts/:id' => 'posts#update'
   # Delete
   delete '/posts/:id' => 'posts#destroy'
+
+  get '/users/index' => 'users#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
