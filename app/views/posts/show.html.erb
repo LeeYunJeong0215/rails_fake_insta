@@ -8,5 +8,9 @@
   </figure>
 </div>
 
+<% if can? :update, @post %>
 <p><a href="/posts/<%=@post.id%>/edit">수정</a></p>
+<% end %>
+<% if can? :destroy, @post %>
 <p><a href="/posts/<%=@post.id%>" data-method="delete" data-confirm="삭제할래?">삭제</a></p>
+<% end %>
