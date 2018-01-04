@@ -7,14 +7,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
-      ## Recoverable
+      ## Recoverable 패스워드가 맞는지 여부
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
-      ## Rememberable
+      ## Rememberable 로그인 중인지 여부
       t.datetime :remember_created_at
 
-      ## Trackable
+      ## Trackable 유저 아이피, 마지막 로그인 장소 등
       t.integer  :sign_in_count, default: 0, null: false
       t.datetime :current_sign_in_at
       t.datetime :last_sign_in_at

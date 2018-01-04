@@ -2,10 +2,11 @@ class PostsController < ApplicationController
   # before_action은 하나의 액션을 실행하기 전에 해당 메소드를 실행.
   # 컨트롤러.. filter
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: :index
 
   def index
     # 모든 것을 보여주는 곳...
-      @posts = Post.where("title LIKE ?", "%#{params["q"]}%")
+      @posts = Post.where("title LIKE ?", "%#{params["q"]}%") #검색
   end
 
   def new
@@ -17,25 +18,25 @@ class PostsController < ApplicationController
     # post.title = params[:title]
     # post.content = params[:content]
     # post.save
-    puts "************************"
-    puts post_params.inspect
-    puts "************************"
     redirect_to '/'
   end
+
   # Read
   def show
-    # @post = Post.find(params[:id])
+    # @post = Post.find(params[:id]) #코드 중복 방지
   end
+
   # update
   def update
-    # @post = Post.find(params[:id])
+    # @post = Post.find(params[:id]) #코드 중복 방지
     @post.update(post_params)
     redirect_to "/posts/#{@post.id}"
   end
 
   def edit
-    # @post = Post.find(params[:id])
+    # @post = Post.find(params[:id]) #코드 중복 방지
   end
+
   # delete
   def destroy
     @post.destroy
@@ -55,6 +56,6 @@ class PostsController < ApplicationController
 # strong parameter
   def post_params
     params.require(:post).permit(:title, :content, :postimage)
-    #   "post"=>{"title"=>"asdf", "content"=>"q1111"}
+    #  이런 해쉬를 리턴해줌 : "post"=>{"title"=>"asdf", "content"=>"q1111"}
   end
 end

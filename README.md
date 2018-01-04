@@ -77,7 +77,7 @@ $ rails g scaffold post title:string content:text
 
 ### 3. [파일업로드](https://github.com/carrierwaveuploader/carrierwave)
 
-  1. `gemfile`
+    1. `gemfile`
 
   ```ruby
   gem carrierwave
@@ -86,7 +86,7 @@ $ rails g scaffold post title:string content:text
   ```console
   $ bundle install
   ```
-  2. 파일업로더 생성
+    2. 파일업로더 생성
 
   ```console
   $ rails generate uploader Avatar
@@ -125,3 +125,60 @@ $ rails g scaffold post title:string content:text
   `gem mini_magick`
 
 ### 4. 인스타처럼 꾸미기(카드형 배치)
+
+
+
+## 20180104
+
+### 5. devise로 회원가입 기능 구현하기
+참고사이트 : [devise](https://github.com/plataformatec/devise)
+
+#####1. 기초 시작하기
+- `Gemfile`에 `gem devise(divise 추가 후) `	`bundle install` 하기
+
+- devise를 설치함
+```console
+$ rails generate devise:install
+
+주요하게 만들어지는 것들 : devise.rb
+```
+
+- User 모델 만들기 with devise
+
+```console
+$ rails g devise User(모델명)
+
+주의) 미리 모델을 만들지 말 것.
+```
+
+- ​
+
+##### 2.추가 내용
+
+- 사용 가능한 helper
+
+  - current_user : 로그인 되어 있으면, 해당 user를 불러올 수 있다.
+  - user_sign_in? : 로그인 되어있는지 => return boolean
+
+- 로그인 해야 페이지 보여주는 방법(`posts_controller.rb`)
+
+  ```ruby
+  before_action :authenticate_user!, except: :index
+  ```
+
+- view에서 로그인해야 글쓰기 및 기타기능 가능하도록 하는 방법(`application.html.erb`)
+
+  ```erb
+  <% if user_signed_in? %>
+    <li>
+    <%= current_user.email %>님
+    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to('Login', new_user_session_path)  %>
+    <%= link_to('회원가입', new_user_registration_path) %>
+    </li>
+  <% end %>
+  ```
+
