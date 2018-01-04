@@ -1,0 +1,820 @@
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (8.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePosts (20180102051253)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "postimage" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180102051253"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+Migrating to CreateBlogs (20180102064541)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (6.4ms)[0m  CREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180102064541"]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:14:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+Completed 200 OK in 7666ms (Views: 7602.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:14:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 124ms (Views: 122.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/blogs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2018-01-03 05:14:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2018-01-03 05:14:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-8c191647dee23465f30b71b96ae98696d21513ace2e4c8b16a4bea9164cadbdb.css?body=1" for 10.0.2.2 at 2018-01-03 05:14:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/blogs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2018-01-03 05:14:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2018-01-03 05:14:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:14:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 123.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:19:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 178ms (Views: 176.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2018-01-03 05:19:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 233ms (Views: 232.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:19:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:20:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 181ms (Views: 178.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:20:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 118ms (Views: 116.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:20:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 112.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2018-01-03 05:37:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 127ms (Views: 126.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2018-01-03 05:37:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+ZtKyXCVry/zCk2lEBuxFT1A6pIrV5YmrFRgWjy+2IsjnVDyyKFjnxrYFA3oKQtPlkDyOoUPrxvly3M/moV0Q==", "post"=>{"title"=>"1번사진", "content"=>"", "postimage"=>#<ActionDispatch::Http::UploadedFile:0x00007f35f613e628 @tempfile=#<Tempfile:/tmp/RackMultipart20180103-4549-1tzmen4.jpg>, @original_filename="Chrysanthemum.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[postimage]\"; filename=\"Chrysanthemum.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "posts" ("title", "content", "postimage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1번사진"], ["content", ""], ["postimage", "Chrysanthemum.jpg"], ["created_at", "2018-01-03 05:37:22.701819"], ["updated_at", "2018-01-03 05:37:22.701819"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 365ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:37:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/posts_controller.rb:8:in `index'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:37:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/posts_controller.rb:8:in `index'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:37:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/posts_controller.rb:8:in `index'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2018-01-03 05:42:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/vagrant/fake_insta/app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2018-01-03 05:44:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/vagrant/fake_insta/app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:44:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/vagrant/fake_insta/app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:48:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/vagrant/fake_insta/app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:48:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/vagrant/fake_insta/app/controllers/posts_controller.rb:62: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/posts_controller.rb:62: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:48:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/vagrant/fake_insta/app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/posts_controller.rb:63: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:49:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 221ms (Views: 179.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2018-01-03 05:49:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 131.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2018-01-03 05:49:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YTdRvJ0SMYKwgb9XKUmhYXAAXAof5lobpyB6mrnsxI1WX0nUc/LisHMm9jGKqWuIGqxcaL1fOv9SBgbXL3QqPg==", "post"=>{"title"=>"222222", "content"=>"", "postimage"=>#<ActionDispatch::Http::UploadedFile:0x000055784f8097c0 @tempfile=#<Tempfile:/tmp/RackMultipart20180103-4549-ejsgxz.jpg>, @original_filename="Desert.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[postimage]\"; filename=\"Desert.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "postimage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "222222"], ["content", ""], ["postimage", "Desert.jpg"], ["created_at", "2018-01-03 05:50:00.233313"], ["updated_at", "2018-01-03 05:50:00.233313"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 249ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:50:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 120.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?post%5Bq%5D=" for 10.0.2.2 at 2018-01-03 05:50:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"post"=>{"q"=>""}}
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 146ms (Views: 144.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2018-01-03 05:50:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 139ms (Views: 138.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2018-01-03 05:50:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k1F+/kWwBCtK2xs9q6oVoh5WKhl9K4HX0A8EHjfPhEqkOWaWq1DXGYl8UlsISt9LdPoqe9+S4TMlKXhToVdq+Q==", "post"=>{"title"=>"333333", "content"=>"", "postimage"=>#<ActionDispatch::Http::UploadedFile:0x00007f35f6233cb8 @tempfile=#<Tempfile:/tmp/RackMultipart20180103-4549-16pl9j6.jpg>, @original_filename="Koala.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[postimage]\"; filename=\"Koala.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.8ms)[0m  INSERT INTO "posts" ("title", "content", "postimage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "333333"], ["content", ""], ["postimage", "Koala.jpg"], ["created_at", "2018-01-03 05:50:23.935398"], ["updated_at", "2018-01-03 05:50:23.935398"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 219ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:50:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2018-01-03 05:50:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 116ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2018-01-03 05:50:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cxgFX0A5Qd1faSUI/gaSUU7Ut25jSlp1R9jH0VmrY6JEcB03rtmS75zObG5d5li4JHi3DMHzOpGy/ruczzONEQ==", "post"=>{"title"=>"444444", "content"=>"", "postimage"=>#<ActionDispatch::Http::UploadedFile:0x00007f35f61f3000 @tempfile=#<Tempfile:/tmp/RackMultipart20180103-4549-1ulbf30.jpg>, @original_filename="Koala.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[postimage]\"; filename=\"Koala.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.8ms)[0m  INSERT INTO "posts" ("title", "content", "postimage", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "444444"], ["content", ""], ["postimage", "Koala.jpg"], ["created_at", "2018-01-03 05:50:45.415337"], ["updated_at", "2018-01-03 05:50:45.415337"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 218ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 05:50:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 118.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?post%5Bq%5D=4" for 10.0.2.2 at 2018-01-03 05:50:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"post"=>{"q"=>"4"}}
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%4%')[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 146ms (Views: 144.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/?post%5Bq%5D=3" for 10.0.2.2 at 2018-01-03 05:50:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"post"=>{"q"=>"3"}}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%3%')
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 152ms (Views: 149.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?post%5Bq%5D=3" for 10.0.2.2 at 2018-01-03 05:51:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"post"=>{"q"=>"3"}}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%3%')[0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 147ms (Views: 145.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?post%5Bq%5D=2" for 10.0.2.2 at 2018-01-03 05:51:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"post"=>{"q"=>"2"}}
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%2%')
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 130.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?post%5Bq%5D=1" for 10.0.2.2 at 2018-01-03 05:51:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"post"=>{"q"=>"1"}}
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%1%')[0m
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 127ms (Views: 125.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2018-01-03 05:51:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 181ms (Views: 180.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 06:11:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/posts_controller.rb:8:in `index'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-03 06:12:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 168ms (Views: 140.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/?q=3" for 10.0.2.2 at 2018-01-03 06:12:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"q"=>"3"}
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%3%')[0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 131ms (Views: 129.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/?q=1" for 10.0.2.2 at 2018-01-03 06:12:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"q"=>"1"}
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%1%')
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 223ms (Views: 219.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/?q=3" for 10.0.2.2 at 2018-01-03 06:12:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"q"=>"3"}
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%3%')[0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 169ms (Views: 166.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/?q=2" for 10.0.2.2 at 2018-01-03 06:12:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"q"=>"2"}
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%2%')
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 161ms (Views: 159.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/?q=4" for 10.0.2.2 at 2018-01-03 06:12:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"q"=>"4"}
+  [1m[36mPost Load (2.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%4%')[0m
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 238ms (Views: 235.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/4" for 10.0.2.2 at 2018-01-03 06:12:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (2.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 379ms (Views: 301.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/?q=5" for 10.0.2.2 at 2018-01-03 06:20:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"q"=>"5"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%5%')[0m
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 221ms (Views: 218.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 00:19:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (3.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (53.8ms)
+  Rendered layouts/_navbar.html.erb (6.2ms)
+Completed 200 OK in 1717ms (Views: 1628.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/1235" for 10.0.2.2 at 2018-01-04 00:53:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/1235"):
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20180104012556)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (5.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180104012556"]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 01:30:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 866ms (Views: 829.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/signup" for 10.0.2.2 at 2018-01-04 01:30:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/users/signup"):
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.5ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.2ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2018-01-04 01:30:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/devise-4.4.0/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/devise-4.4.0/app/views/devise/registrations/new.html.erb within layouts/application (139.8ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 288ms (Views: 270.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2018-01-04 01:31:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RzP23rZEEPu0pzAzYq9CZg8ZS1cdO257+wJx0XypZsTAcZ0J6ggE/2RO/5BMm87uj8cWNyaCVy5PizHI9xaUsQ==", "user"=>{"email"=>"gu@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (1.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'gu@gmail.com' LIMIT 1
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "gu@gmail.com"], ["encrypted_password", "$2a$11$wjCn4WBK7Y3aTaf2W.ieOOxyEYnhnn2s1gHAdTsYkNKod0QJACo1K"], ["created_at", "2018-01-04 01:31:02.779064"], ["updated_at", "2018-01-04 01:31:02.779064"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2018-01-04 01:31:02.789423"], ["current_sign_in_at", "2018-01-04 01:31:02.789423"], ["last_sign_in_ip", "10.0.2.2"], ["current_sign_in_ip", "10.0.2.2"], ["sign_in_count", 1], ["updated_at", "2018-01-04 01:31:02.790526"], ["id", 1]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 286ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 01:31:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 127ms (Views: 125.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/db" for 10.0.2.2 at 2018-01-04 01:31:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::DashboardController#index as HTML
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/dashboard/index.html.erb within layouts/rails_db/application (8.0ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/shared/_header.html.erb (8.3ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/shared/_sidebar.html.erb (1.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/shared/_gems.html.erb (0.7ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/shared/_footer.html.erb (22.1ms)
+Completed 200 OK in 1250ms (Views: 1248.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/rails_db/foundation.min.self-35376cedab550837a894b5336dc978e65c7880960efa135709a5f5c02d874077.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/codemirror.self-6a14f4765e5eb8280c11af3cbce58685d2604c895fd3ce66592454f751edb002.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/codemirror/themes/pastel-on-dark.self-3bc2071874ad126a3e5ecc5ece5ae77151c1dc358e77c483863ef2c323c0f8cb.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/codemirror/addons/hint/show-hint.self-5139c4701e80b3eefc9588f1a124ba6784b5a556ae73ea6c3b83f498e2893e12.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/foundation_and_overrides.self-3ccd736cd08a959a4135aca3c292b61c4263dacb5fd257c834c31948ac0c25af.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/app.self-b331ca9582b79bd9a25264b637023ad691d5931d04d9092d2cec11be6144dfbe.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/sidebar.self-d3f51ad8fa16ad94b2afbb5d6a7694bda3ca1c24f66d49d9149bb79d5f81a342.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/pagination.self-867fc87d1ee39b7eda707fd25bb2e714f9baa2066b82755d3cec931d631158f0.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/table.self-014b469574a6ad9479d2cc6bb1e8075ec00a27d7527c6aef59a2870ef8d55065.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/forms.self-834ca1245cba2d14f46c665e2b8e8fdfd3c47074aad19a29397ad3b27888bfda.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/search.self-c6c9c68c2d631a53e8ac3de118d1982a67047ae68c829fb4c4bec025c27bdbb6.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/application.self-cda66a0458c81c95421b4ab1ee6d3677515cb88281771f4fcf49a3b797242381.css?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/jquery.self-531d4cb884ed45ea19381d13707d3eb4ba477ceac524282cb603ffcc6e968b3f.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/jquery.cookie.self-4d5cd589b27840dd1b295c58c942f063418200fb1ace98b75af7f8fe7510b1c4.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/rails-ujs.self-95f602627c72029ef2161871d586b93da2529f9020d3a8a62ff184732c88ebbf.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/foundation.min.self-57f8cdb550b449186f2342f00dcd6859db87afd5c60340fa73aaba5b9666a565.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/sticky.self-5ca38640b18fe8975e088b1ee592652571991a97f40d8ac0e127320f7593bd19.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/show_hide_columns.self-ed04f36ffccb5272a74100e4ca750191641c530c3fabf6b5565af075e08cc23c.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/search.self-77a0ff826fe4b19b86c2766c9dc1f58936d08266d19b623aadb92d0b729ad0b3.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/codemirror.self-ce134e372d984fe4e9e1548e3442b5f4caf908f610337dd20f97392a8bce3551.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/codemirror/modes/sql.self-d9855b9d7ac2cf16a9fa675981787e13a6b70c50f8bb179a3224d484c8f45072.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/codemirror/addons/hint/show-hint.self-b92af6c2a5eb1e8653ab3fe78da7d7c5737af1e2d83771a316bf0368cc2a268a.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/codemirror/addons/hint/sql-hint.self-d7040867fda791b0eeab95b31428288e97572ae92ab80ccd9022839672228967.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/application.self-c62d31091f60357d37422398400b64079b7003d006927fb5fd95d615bc5f88a7.js?body=1" for 10.0.2.2 at 2018-01-04 01:31:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/logo_mini-a0c1f83613bce7afc7554ddec7cc4627b1682b802fc6fe0b56c755c9536ad869.png" for 10.0.2.2 at 2018-01-04 01:31:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/rails_db/logo-59fa16b8a4541ba856b0be60e8d9e935ea790c7d43ad29181ff8cd5794461428.png" for 10.0.2.2 at 2018-01-04 01:31:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/rails/db/tables/users/data" for 10.0.2.2 at 2018-01-04 01:31:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RailsDb::TablesController#data as JS
+  Parameters: {"table_id"=>"users"}
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/shared/_exp_col.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (28.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/tables/_condition_fields.html.erb (13.1ms)
+  [1m[35m Load (1.3ms)[0m  SELECT  "users".* FROM "users" LIMIT 25 OFFSET 0
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/tables/_row.html.erb (5.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/tables/_sql.html.erb (0.3ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/tables/_data.html.erb (157.2ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/rails_db-1.6.0/app/views/rails_db/tables/data.js.erb (171.1ms)
+Completed 200 OK in 234ms (Views: 211.3ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 01:31:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%%')[0m
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 128ms (Views: 126.3ms | ActiveRecord: 0.8ms)
