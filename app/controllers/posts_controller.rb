@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   # 컨트롤러.. filter
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :index
+  before_action :is_owner?, only: [:update, :edit, :destroy]
 
   def index
     # 모든 것을 보여주는 곳...
@@ -58,4 +59,10 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :content, :postimage)
     #  이런 해쉬를 리턴해줌 : "post"=>{"title"=>"asdf", "content"=>"q1111"}
   end
+
+  def is_owner?
+    #게시글의 주인, 로그인한 사람이 같지 않으면
+    redirect_to '/' and return unless @post.user_id == current_user.id
+  end
+
 end

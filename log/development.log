@@ -3041,3 +3041,441 @@ Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (1.8ms)
   Rendered layouts/_navbar.html.erb (0.2ms)
 Completed 200 OK in 137ms (Views: 133.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/index" for 10.0.2.2 at 2018-01-04 05:43:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 843ms (Views: 782.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:44:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+SyntaxError (/vagrant/fake_insta/app/controllers/posts_controller.rb:68: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/posts_controller.rb:68: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:44:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.5ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 206ms (Views: 157.4ms | ActiveRecord: 7.5ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2018-01-04 05:44:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nBHQptlpKYiMGYbTso5K/PKv0cq45q3yUiwN+gOQUuXm/ErZIUfUv1Tf3z1p0GGKeVZ6ZMa6iMSBB6kKZTkllw=="}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:44:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%%')[0m
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 165ms (Views: 163.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2018-01-04 05:44:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (70.3ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 241ms (Views: 239.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2018-01-04 05:44:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N5Iu6pgFrkGMkNbl+swvcgyzfm37u5S7ddxCvqf4a27dMSPYvHJ9OIAlzljNCyZ1UAGOY0faQyM7mcQsH6iBYQ==", "user"=>{"email"=>"2@2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "username"=>"222222"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = '2@2' LIMIT 1[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "2@2"], ["encrypted_password", "$2a$11$lTNjCRyBd221m6FwxLYuGOfnnHjQgKd.2I6IQlTJKqgDbD95a6Aya"], ["username", "222222"], ["created_at", "2018-01-04 05:44:41.231088"], ["updated_at", "2018-01-04 05:44:41.231088"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.1ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-01-04 05:44:41.237489"], ["current_sign_in_at", "2018-01-04 05:44:41.237489"], ["last_sign_in_ip", "10.0.2.2"], ["current_sign_in_ip", "10.0.2.2"], ["sign_in_count", 1], ["updated_at", "2018-01-04 05:44:41.238626"], ["id", 3]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 214ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:44:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%%')[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 128ms (Views: 124.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2018-01-04 05:44:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered posts/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 153.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2018-01-04 05:44:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/h04YylFRAhnYTO+K+pgmeYhzXY58uuvzTSrdxZPKJFW3nTqNLGaS0onHPPaKCFOyp3O2SGHDbxcVQ/ZAnWrQ==", "post"=>{"title"=>"2222", "content"=>"", "postimage"=>#<ActionDispatch::Http::UploadedFile:0x00007f8a7dc864f0 @tempfile=#<Tempfile:/tmp/RackMultipart20180104-3698-1sf081p.jpg>, @original_filename="Chrysanthemum.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[postimage]\"; filename=\"Chrysanthemum.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save changes"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "posts" ("title", "content", "postimage", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "2222"], ["content", ""], ["postimage", "Chrysanthemum.jpg"], ["user_id", 3], ["created_at", "2018-01-04 05:44:50.318935"], ["updated_at", "2018-01-04 05:44:50.318935"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 285ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:44:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 136ms (Views: 133.9ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2018-01-04 05:44:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sL53JNVw1DheSGGNFO8cs5dC8FOpifvpPM6HGQfsO5NaHXoW8QcHQVL9eTAjKBW0y/AAXRXoLHFyiwGLv7zRnA=="}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:44:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%%')[0m
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 147ms (Views: 145.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2018-01-04 05:44:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (52.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 250ms (Views: 248.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2018-01-04 05:44:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (56.1ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 211ms (Views: 209.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2018-01-04 05:45:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Td8AiSuDDbronyC5+iwQGNTIyfCsq7PeS+4TRTw8nfs1jOwvia6vtibwnYZ6wo+SD+Be8LXbPKA2nWYzzpV0vA==", "user"=>{"email"=>"1@1", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "1@1"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2018-01-04 05:45:01.570219"], ["sign_in_count", 2], ["updated_at", "2018-01-04 05:45:01.571449"], ["id", 1]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 169ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 145ms (Views: 142.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/1" for 10.0.2.2 at 2018-01-04 05:45:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (1.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 147ms (Views: 137.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/1/edit" for 10.0.2.2 at 2018-01-04 05:45:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (1.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :is_owner? rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 132ms (Views: 129.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/1" for 10.0.2.2 at 2018-01-04 05:45:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 129ms (Views: 125.9ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/posts/1" for 10.0.2.2 at 2018-01-04 05:45:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BILOoGYUcRpjTrUoUb88VdXtwrr4CaOM3p72Una2NER/d2zYO3Az775DIOjLRx/o5vP/mzfVAHJGRdFgL1MlEA==", "id"=>"1"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :is_owner? rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 124ms (Views: 122.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 128ms (Views: 126.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 136ms (Views: 134.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 131ms (Views: 128.8ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2018-01-04 05:45:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k2jASKhFkxNc9U4V9xbo/bt29rQkkvJUKxL+sc7eLwXonWIw9SHR5oH429Vt7stAiGjLletOUaqzydmDlzs+UQ=="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%%')[0m
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 129.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2018-01-04 05:45:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (34.5ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 166ms (Views: 165.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2018-01-04 05:45:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 171ms (Views: 169.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2018-01-04 05:45:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PdWnD9xJg9KIKL4M5CVBDpY++BuMEu/ekAj+J/XHK/gQISvuwNM6CGOEDKseMpIR3QYG+r1SfECCBvnlWimo4A==", "user"=>{"email"=>"2@2", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "2@2"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2018-01-04 05:45:29.848137"], ["sign_in_count", 2], ["updated_at", "2018-01-04 05:45:29.849367"], ["id", 3]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 164ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 130ms (Views: 126.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/1" for 10.0.2.2 at 2018-01-04 05:45:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (2.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 144ms (Views: 131.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/posts/1/edit" for 10.0.2.2 at 2018-01-04 05:45:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (1.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (0.8ms)
+Completed 401 Unauthorized in 39ms (ActiveRecord: 2.2ms)
+
+SyntaxError (/vagrant/fake_insta/app/views/posts/edit.html.erb:7: syntax error, unexpected '<'
+  <%= submit_tag );@output_buffer.safe_append='
+   ^
+/vagrant/fake_insta/app/views/posts/edit.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/vagrant/fake_insta/app/views/posts/edit.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+/vagrant/fake_insta/app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/posts/edit.html.erb:7: syntax error, unexpected '<'
+  app/views/posts/edit.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+  app/views/posts/edit.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/posts/edit.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/ubuntu/.rbenv/versions/2.3.5/lib/ruby/gems/2.3.0/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+
+
+Started DELETE "/posts/1" for 10.0.2.2 at 2018-01-04 05:45:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1zIuZ1SljY4XYLTpReNUuAeIPNFQ9USldYtazRSrDzU31e1M8z7ER03ZIeyffk9/T42YzWrLw2igEeXClhnyhQ==", "id"=>"1"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (title LIKE '%%')[0m
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+Completed 200 OK in 129ms (Views: 127.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for 10.0.2.2 at 2018-01-04 05:45:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 135ms (Views: 132.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2018-01-04 05:45:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7YDIbdWL3LbSS+KF52zrIt3iHPGeROf+GDtI0+/WEXoNZwtGchCVf4jyd4A98fDllee47aR6YDPNoffcbWTsyg==", "post"=>{"title"=>"3333333", "content"=>"", "postimage"=>#<ActionDispatch::Http::UploadedFile:0x00007f8a7e20b5b0 @tempfile=#<Tempfile:/tmp/RackMultipart20180104-3698-vd3ogd.jpg>, @original_filename="Desert.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[postimage]\"; filename=\"Desert.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Save changes"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "posts" ("title", "content", "postimage", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "3333333"], ["content", ""], ["postimage", "Desert.jpg"], ["user_id", 3], ["created_at", "2018-01-04 05:45:51.092059"], ["updated_at", "2018-01-04 05:45:51.092059"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 207ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2018-01-04 05:45:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (title LIKE '%%')
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 128ms (Views: 125.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/2" for 10.0.2.2 at 2018-01-04 05:46:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navbar.html.erb (0.0ms)
+Completed 200 OK in 131ms (Views: 127.7ms | ActiveRecord: 1.6ms)
